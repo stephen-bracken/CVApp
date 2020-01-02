@@ -1,0 +1,16 @@
+extends layout
+
+block variables
+  - var title = "Log in"
+
+block content
+    h2.text-center Login
+    body
+        form(method="post" action="/users/login")
+            input(type="text", name="user",label="username")
+            br
+            input(type="password", name="pass",label="password")
+            br
+            input(type="submit")
+        a(href="/users/create") create account
+    footer

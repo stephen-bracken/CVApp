@@ -1,0 +1,16 @@
+extends layout
+
+block variables
+  - var title = "CV upload"
+
+block content
+  h2.text-center CVs
+
+  .row
+    .offset-sm-2.col-sm-8
+      .jumbotron.text-center.
+        upload a cv here
+  .row
+    form(action="/cv/fileupload",method="post",enctype="multipart/form-data")
+        input(type="file", name="filetoupload")
+        input(type="submit")
